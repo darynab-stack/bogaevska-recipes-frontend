@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вхід | Рецептник</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <a href="index.html" class="logo">Рецептник</a>
+        <nav id="auth-nav" class="auth-nav"></nav>
+      </div>
+      <p class="tagline">Знайди, що приготувати сьогодні</p>
+    </header>
+
+    <main class="container narrow">
+      <h1>Вхід</h1>
+
+      <p id="message" class="message" hidden></p>
+
+      <form id="login-form" class="form" novalidate>
+        <label for="username">Ім'я користувача</label>
+        <input id="username" name="username" type="text" maxlength="150" />
+        <p id="username-error" class="field-error"></p>
+
+        <label for="password">Пароль</label>
+        <input id="password" name="password" type="password" maxlength="128" />
+        <p id="password-error" class="field-error"></p>
+
+        <button type="submit" class="button">Увійти</button>
+      </form>
+
+      <p>Ще немає акаунта? <a href="register.html">Зареєструватися</a></p>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>
