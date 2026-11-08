@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мій профіль | Рецептник</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <a href="index.html" class="logo">Рецептник</a>
+        <nav id="auth-nav" class="auth-nav"></nav>
+      </div>
+      <p class="tagline">Знайди, що приготувати сьогодні</p>
+    </header>
+
+    <main class="container narrow">
+      <h1>Мій профіль</h1>
+
+      <section class="card">
+        <p><strong>Ім'я користувача:</strong> <span id="profile-username"></span></p>
+        <p><strong>Ім'я та прізвище:</strong> <span id="profile-name"></span></p>
+        <p><strong>Email:</strong> <span id="profile-email"></span></p>
+        <p><strong>Роль:</strong> <span id="profile-role"></span></p>
+      </section>
+
+      <h2>Додати кухню</h2>
+      <p>Додавати кухні можуть лише користувачі, які увійшли в акаунт.</p>
+
+      <p id="message" class="message" hidden></p>
+
+      <form id="cuisine-form" class="form" novalidate>
+        <label for="name">Назва *</label>
+        <input id="name" name="name" type="text" maxlength="100" />
+        <p id="name-error" class="field-error"></p>
+
+        <label for="description">Опис</label>
+        <textarea id="description" name="description" rows="3"></textarea>
+        <p id="description-error" class="field-error"></p>
+
+        <button type="submit" class="button">Додати</button>
+      </form>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="profile.js"></script>
+  </body>
+</html>

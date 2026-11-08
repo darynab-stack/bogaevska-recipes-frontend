@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Реєстрація | Рецептник</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <a href="index.html" class="logo">Рецептник</a>
+        <nav id="auth-nav" class="auth-nav"></nav>
+      </div>
+      <p class="tagline">Знайди, що приготувати сьогодні</p>
+    </header>
+
+    <main class="container narrow">
+      <h1>Реєстрація</h1>
+
+      <p id="message" class="message" hidden></p>
+
+      <form id="register-form" class="form" novalidate>
+        <label for="username">Ім'я користувача *</label>
+        <input id="username" name="username" type="text" maxlength="150" />
+        <p id="username-error" class="field-error"></p>
+
+        <label for="first_name">Ім'я</label>
+        <input id="first_name" name="first_name" type="text" maxlength="150" />
+        <p id="first_name-error" class="field-error"></p>
+
+        <label for="last_name">Прізвище</label>
+        <input id="last_name" name="last_name" type="text" maxlength="150" />
+        <p id="last_name-error" class="field-error"></p>
+
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" maxlength="254" />
+        <p id="email-error" class="field-error"></p>
+
+        <label for="password">Пароль *</label>
+        <input id="password" name="password" type="password" maxlength="128" />
+        <p id="password-error" class="field-error"></p>
+
+        <label for="password_confirm">Повторіть пароль *</label>
+        <input
+          id="password_confirm"
+          name="password_confirm"
+          type="password"
+          maxlength="128"
+        />
+        <p id="password_confirm-error" class="field-error"></p>
+
+        <button type="submit" class="button">Зареєструватися</button>
+      </form>
+
+      <p>Уже є акаунт? <a href="login.html">Увійти</a></p>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="register.js"></script>
+  </body>
+</html>

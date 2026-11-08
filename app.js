@@ -1,5 +1,3 @@
-const API_URL = "http://127.0.0.1:8000/api";
-
 const MEAL_TYPES = {
   breakfast: "сніданок",
   soup: "суп",
@@ -96,9 +94,11 @@ searchForm.addEventListener("submit", (event) => {
 
 async function start() {
   try {
+    renderHeader(await loadCurrentUser());
     await loadCuisines();
     await loadRecipes();
   } catch (error) {
+    renderHeader(null);
     showMessage(
       "Не вдалося з'єднатися з сервером. Перевірте, що бекенд запущений на " +
         "http://127.0.0.1:8000",
